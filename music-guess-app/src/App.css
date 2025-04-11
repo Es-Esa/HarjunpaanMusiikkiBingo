@@ -1,0 +1,274 @@
+/* src/App.css */
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.App {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h1, h2, h3 {
+  color: #333;
+  text-align: center;
+}
+
+.navigation {
+  text-align: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 15px;
+}
+
+.navigation button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 1em;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  background-color: #e7e7e7;
+  border-radius: 4px;
+}
+
+.navigation button:disabled {
+  background-color: #d0d0d0;
+  cursor: not-allowed;
+  color: #888;
+}
+
+.navigation button:hover:not(:disabled) {
+  background-color: #ddd;
+}
+
+.content {
+  margin-top: 20px;
+}
+
+/* --- Setup Styles --- */
+.setup-container {
+  display: flex;
+  gap: 30px;
+  justify-content: space-around;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.section {
+  flex: 1; /* Each section takes equal space */
+  min-width: 300px; /* Minimum width before wrapping */
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+.section h3 {
+   margin-top: 0;
+   border-bottom: 1px solid #eee;
+   padding-bottom: 10px;
+   margin-bottom: 15px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.input-group input[type="text"],
+.input-group input[type="url"] {
+  width: calc(100% - 22px); /* Account for padding/border */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.input-group button {
+  padding: 10px 15px;
+  margin-top: 10px;
+  background-color: #5cb85c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.input-group button:hover {
+  background-color: #4cae4c;
+}
+
+.item-list {
+  list-style: none;
+  padding: 0;
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.item-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 5px;
+  border-bottom: 1px solid #eee;
+}
+
+.item-list li:last-child {
+  border-bottom: none;
+}
+
+.item-list span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-right: 10px; /* Space before delete button */
+}
+
+.item-list button {
+  padding: 3px 8px;
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 0.8em;
+}
+
+.item-list button:hover {
+  background-color: #c9302c;
+}
+
+
+/* --- Game Room Styles --- */
+.game-room {
+  display: flex;
+  gap: 30px;
+}
+
+.player-list-container {
+  flex: 1; /* Takes 1 part of the space */
+  min-width: 250px;
+  max-width: 350px;
+  border-right: 1px solid #eee;
+  padding-right: 20px;
+}
+
+.player-list {
+  list-style: none;
+  padding: 0;
+}
+
+.player-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px dashed #eee;
+}
+
+.player-item:last-child {
+    border-bottom: none;
+}
+
+.player-info {
+    font-weight: bold;
+}
+
+.player-score {
+  font-size: 1.1em;
+  margin: 0 10px;
+  min-width: 30px; /* Ensure space for score */
+  text-align: center;
+}
+
+.score-controls button {
+  padding: 2px 6px;
+  margin: 0 2px;
+  cursor: pointer;
+  font-size: 1em;
+  line-height: 1;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+}
+
+.score-controls button.increase {
+  background-color: #c8e6c9; /* Light green */
+}
+.score-controls button.decrease {
+  background-color: #ffcdd2; /* Light red */
+}
+.score-controls button:hover {
+  filter: brightness(95%);
+}
+
+
+.game-controls {
+  flex: 3; /* Takes 3 parts of the space */
+  text-align: center;
+}
+
+.audio-player-hidden {
+  width: 0 !important;
+  height: 0 !important;
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  /* Or use react-player's light prop or width/height 0 */
+}
+
+.game-buttons button {
+  padding: 12px 25px;
+  margin: 10px;
+  font-size: 1.1em;
+  cursor: pointer;
+  border-radius: 5px;
+  border: none;
+}
+
+.play-button {
+  background-color: #4CAF50; /* Green */
+  color: white;
+}
+.play-more-button {
+  background-color: #2196F3; /* Blue */
+  color: white;
+}
+.reveal-button {
+  background-color: #ff9800; /* Orange */
+  color: white;
+}
+.next-button {
+  background-color: #9E9E9E; /* Grey */
+  color: white;
+}
+
+.game-buttons button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.game-buttons button:hover:not(:disabled) {
+  filter: brightness(110%);
+}
+
+
+.song-reveal {
+  margin-top: 25px;
+  padding: 15px;
+  background-color: #e3f2fd; /* Light blue */
+  border: 1px solid #bbdefb; /* Medium blue */
+  border-radius: 5px;
+  min-height: 30px; /* Ensure it takes space even when empty */
+  font-size: 1.2em;
+  font-weight: bold;
+  color: #1e88e5; /* Darker blue */
+}
